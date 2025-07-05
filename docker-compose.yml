@@ -1,0 +1,44 @@
+# docker-compose.yml
+version: "3.5"
+
+services:
+  mariadb:
+    container_name: mariadb
+    image: mariadb:11.8.2-ubi9
+    environment:
+      - MYSQL_ROOT_PASSWORD=SuperSecretPassword
+      - MYSQL_USER=MariaDBUser
+      - MYSQL_PASSWORD=MariaDBPass
+      - MYSQL_DATABASE=dbname
+    volumes:
+      - mariadb-vol:/var/lib/mysql
+    restart: unless-stopped
+
+  shlink:
+    image: shlinkio/shlink:stable
+    container_name: shlink
+    environment:
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_USER=MariaDBUser
+      - DB_PASSWORD=MariaDBPass
+      - DB_NAME=dbname
+      - DB_DRIVER=maria
+      - DEFAULT_DOMAIN=domain.io
+      - IS_HTTPS_ENABLED=true
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+
+  shlink-client:
+    image: shlinkio/shlink-web-client
+    container_name: shlink-client
+    ports:
+      - 8081:8080
+    restart: unless-stopped 
+
+volumes:
+  mariadb-vol:
+    driver: local
