@@ -60,11 +60,11 @@ The solution uses the following Docker images:
 
 - A practical tutorial on self-hosting Matomo analytics using Docker: [davquar.it - Matomo Docker Guide](https://davquar.it/post/self-hosting/matomo-docker/)
 
-- Official repository of Docker Compose examples showing various Matomo deployment scenarios: (Matomo Docker Examples)[https://github.com/matomo-org/docker/tree/master/.examples]
+- Official repository of Docker Compose examples showing various Matomo deployment scenarios: [Matomo Docker Examples](https://github.com/matomo-org/docker/tree/master/.examples)
 
-- Official Shlink documentation detailing the environment variables needed to configure Matomo analytics integration with Shlink URL shortener: (Shlink Matomo Integration Docs)[https://shlink.io/documentation/environment-variables/#matomo-integration]
+- Official Shlink documentation detailing the environment variables needed to configure Matomo analytics integration with Shlink URL shortener: [Shlink Matomo Integration Docs](https://shlink.io/documentation/environment-variables/#matomo-integration)
 
-- Discussion thread about Matomo integration implementation in Shlink, including feature requests and technical considerations for the analytics integration: (Shlink GitHub Issue #1798)[https://github.com/shlinkio/shlink/issues/1798]
+- Discussion thread about Matomo integration implementation in Shlink, including feature requests and technical considerations for the analytics integration: [Shlink GitHub Issue #1798](https://github.com/shlinkio/shlink/issues/1798)
 
 # 🤝 How to Contribute
 Every contribution to improve this project is welcome! Here’s how you can help:
@@ -72,7 +72,7 @@ Every contribution to improve this project is welcome! Here’s how you can help
 
 ## 💻 Code & Documentation Improvements
 1) Fork the repository
-2) Create a new branch (`git checkout -b feature/your-feature`)
-3) Commit your changes (`git commit -m "Comment your improvements"`)
-4) Push to the branch (`git push origin feature/your-feature`)
+2) Create a new branch: `git checkout -b your-fork/your-feature`
+3) Commit your changes: `git commit -m "Comment your improvements"`
+4) Push to the branch: `git push origin your-fork/your-feature`
 5) Open a Pull Request
